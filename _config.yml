@@ -11,3 +11,8 @@ plugins:
   - jekyll-seo-tag
   
 copyright: "© 2025 sealeelike. Licensed under CC BY-NC-ND 4.0."
+
+collections:
+  pages:
+    output: true
+    permalink: /:collection/:name
