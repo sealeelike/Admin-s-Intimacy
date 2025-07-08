@@ -15,9 +15,7 @@ layout: default
 
 ## 目录
 
-*   [第一章：核心模型](./01-core-model.html)
-*   [第二章：调试我们的生活](./02-debugging-life.html)
-*   *(在此处添加更多章节链接)*
+* test
 
 ---
 
