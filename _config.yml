@@ -3,6 +3,8 @@ title: "Admin's Intimacy"
 subtitle: "$ ssh soulmate@lover -i ~/.ssh/trust"
 author: sealeelike
 year: 2025
+
+description: "$ ssh soulmate@lover -i ~/.ssh/trust"
 description: "A Deep Dive with AI into Love, Sex, and Connection"
 
 theme: jekyll-theme-minimal
