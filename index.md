@@ -18,6 +18,7 @@ Welcome to read and discuss.
 ## Contents / 目录
 
 * [引子](test.html)
+* [test](pages/zh-Hans/1-introduction.html)
 
 ---
 
