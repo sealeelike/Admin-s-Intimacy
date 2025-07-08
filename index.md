@@ -17,7 +17,7 @@ Welcome to read and discuss.
 
 ## Contents / 目录
 
-* [引子](pages/zh-Hans/1.introduction.html)
+* [引子]({%_pages/zh-Hans/1.introduction.md%})
 
 ---
 
