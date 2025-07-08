@@ -15,7 +15,7 @@ Welcome to read and discuss.
 
 ---
 
-## 目录 / Contents
+## Contents / 目录
 
 * test
 
