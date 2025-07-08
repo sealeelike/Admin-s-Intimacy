@@ -1,11 +1,13 @@
 # 网站基本信息
-title: 亲密关系：一本系统管理员手册
-author: [您的署名或笔名]
-description: "一次关于爱、性与连接的深度探索。基于与AI的深度对话整理而成。"
+title: "Admin's Intimacy"
+subtitle: "$ ssh soulmate@lover -i ~/.ssh/trust"
+author: sealeelike
+year: 2025
+description: "A Deep Dive with AI into Love, Sex, and Connection"
 
-# 指定网站主题
-# 这是最关键的一行，它告诉GitHub Pages使用哪个主题来渲染你的网站
 theme: jekyll-theme-minimal
 
-# 添加版权信息，这样可以在某些主题的页脚显示
-copyright: "© 2024 [您的署名/笔名]. Licensed under CC BY-NC-ND 4.0."
+plugins:
+  - jekyll-seo-tag
+  
+copyright: "© 2025 sealeelike. Licensed under CC BY-NC-ND 4.0."
