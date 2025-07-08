@@ -3,23 +3,30 @@
 layout: default
 ---
 
-# 亲密关系：一本系统管理员手册
+# Admin's intimacy / 管理员的亲密关系
 
-> 一次关于爱、性与连接的深度探索。
+This article mainly uses computer-related concepts to analogize the subtle emotional issues between people.
 
-这是一本记录我与人工智能进行深度对话，并共同构建认知模型的思想实验文集。我们从一个具体的问题出发，逐步建立起一套关于“亲密关系”的系统管理员手册。
+Welcome to read and discuss.
+
+本文主要利用电脑相关概念，类比人与人微妙的感情问题。
 
 欢迎你的阅读与探讨。
 
 ---
 
-## 目录
+## 目录 / Contents
 
 * test
 
 ---
 
+**Copyright Statement**
+
+This work is licensed under [Attribution-NonCommercial-NoDerivatives 4.0 International](./LICENSE).
+© 2024 [sealeelike].
+
 **版权声明**
 
 本作品采用[知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](./LICENSE)进行许可。
-© 2024 [您的署名/笔名].
+© 2024 [sealeelike].
