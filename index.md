@@ -7,9 +7,9 @@ layout: default
 
 This article mainly uses computer-related concepts to analogize the subtle emotional issues between people.
 
-Welcome to read and discuss.
-
 本文主要利用电脑相关概念，类比人与人微妙的感情问题。
+
+Welcome to read and discuss.
 
 欢迎你的阅读与探讨。
 
