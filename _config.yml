@@ -13,6 +13,6 @@ plugins:
 copyright: "© 2025 sealeelike. Licensed under CC BY-NC-ND 4.0."
 
 collections:
-  pages:
+  chapters:
     output: true
     permalink: /:collection/:name
