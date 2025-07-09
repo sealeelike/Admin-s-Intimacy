@@ -23,7 +23,7 @@ layout: default
 
 ## Contents / 目录
 
-* [引子]()
+* [引子](_chapters/part1/test.html)
 * [test]()
 
 ---
