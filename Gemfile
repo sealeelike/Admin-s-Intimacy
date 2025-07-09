@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+gem "jekyll", "~> 4.3.1"
+gem "jekyll-theme-minimal"
+gem "csv"
+gem "base64"
+gem "logger"
