@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "主页" # 这个title会显示在浏览器的标签页上
+title: "Admin's Intimacy" # 这个title会显示在浏览器的标签页上
 ---
 
 # Admin's intimacy / 管理员的亲密关系
