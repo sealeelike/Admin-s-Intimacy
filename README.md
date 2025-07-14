@@ -128,3 +128,7 @@ $ ssh soulmate@lover -i ~/.ssh/trust
 **结语：成为一个优秀的系统管理员 —— 我们的最终蓝图**
 *(总结并系统性地呈现这个在旅程中不断演进而成的、强大的情感模型)*
 
+### todolist
+- [ ] Restructure the table of contents of the readme page
+- [ ] Making an analogy map
+- [ ] English version
