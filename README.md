@@ -130,4 +130,5 @@ $ ssh soulmate@lover -i ~/.ssh/trust
 
 ### todolist
 - [ ] Restructure the table of contents of the readme page
+- [ ] Making an analogy map
 - [ ] English version
