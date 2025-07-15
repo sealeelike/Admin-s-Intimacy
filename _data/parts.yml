@@ -1,9 +1,17 @@
 # _data/parts.yml
 
 - id: 1
-  title: "迷雾中的线索 —— 概念的诞生"
-  overview: "本部分的目标是：通过解决具体问题，逐一引入核心类比，让读者在不知不-觉中熟悉我们的“术语”，为最终揭示整个世界观做好铺垫。"
+  title:
+    cn: "迷雾中的线索 —— 概念的诞生"
+    en: "Clues in the Mist - The Birth of Concepts"
+  overview:
+    cn: "本部分的目标是：通过解决具体问题，逐一引入核心类比，让读者在不知不觉中熟悉我们的“术语”，为最终揭示整个世界观做好铺垫。"
+    en: "The goal of this part is to introduce core analogies one by one by solving specific problems, allowing readers to become familiar with our 'terminology' unconsciously, paving the way for the final reveal of the entire worldview."
 
 - id: 2
-  title: "在应用中演进 —— 用不完美的模型调试复杂的世界"
-  overview: "本部分是全书的“华彩乐章”。我们将系统性地揭示整个情感操作系统的世界观，将之前零散的线索串联成一个逻辑自洽、威力巨大的解释框架。"
+  title:
+    cn: "在应用中演进 —— 用不完美的模型调试复杂的世界"
+    en: "Evolving in Application - Debugging a Complex World with an Imperfect Model"
+  overview:
+    cn: "本部分是全书的“华彩乐章”。我们将系统性地揭示整个情感操作系统的世界观，将之前零散的线索串联成一个逻辑自洽、威力巨大的解释框架。"
+    en: "This part is the 'grand movement' of the book. We will systematically unveil the worldview of the entire emotional operating system, connecting the previously scattered clues into a logically self-consistent and powerful explanatory framework."

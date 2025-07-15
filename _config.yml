@@ -15,4 +15,15 @@ copyright: "© 2025 sealeelike. Licensed under CC BY-NC-ND 4.0."
 collections:
   chapters:
     output: true
-    permalink: /:collection/:name
+
+defaults:
+  - scope:
+      path: "_chapters/cn"
+    values:
+      lang: "cn"
+      permalink: /cn/chapters/:name.html
+  - scope:
+      path: "_chapters/en"
+    values:
+      lang: "en"
+      permalink: /chapters/:name.html

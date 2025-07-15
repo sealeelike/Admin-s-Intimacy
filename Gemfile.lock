@@ -79,6 +79,7 @@ DEPENDENCIES
   base64
   csv
   jekyll (~> 4.3.1)
+  jekyll-seo-tag
   jekyll-theme-minimal
   logger
 

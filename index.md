@@ -1,41 +1,42 @@
 ---
 layout: default
-title: "Admin's Intimacy" # 这个title会显示在浏览器的标签页上
+title: "Admin's Intimacy"
+lang: en
 ---
 
-# Admin's intimacy / 管理员的亲密关系
+# Admin's intimacy
 
-人类的情感，能否被量化？爱与欲望的边界，能否用逻辑来勘定？
+Can human emotions be quantified? Can the boundaries of love and desire be defined by logic?
 
-我的探索始于一个具体的问题——关于“嫖娼”的合法性。我将它抛给了AI，期待一场辩论，却收获了一次深刻的启示。在对话的演进中，我们共同构建了一个奇特的“统一场论”：将人类的情感世界，完全映射到计算机系统的架构之上。
+My exploration began with a specific question—about the legitimacy of "prostitution." I posed it to an AI, expecting a debate, but instead, I received a profound revelation. As our dialogue evolved, we co-constructed a peculiar "unified field theory": mapping the human emotional world entirely onto the architecture of a computer system.
 
-在这个世界里，模糊地带消失了。每一个行为、每一种关系，都有了其精确的定义。性是sudo指令集，拥有触及内核的最高权限；爱情是Root账户的相互托付；友情则是拥有特定高级权限的信任用户。**我们谈论的不再是“对与错”，而是“风险与成本”、“配置与兼容性”、“漏洞与补丁”。**
+In this world, ambiguity disappears. Every action, every relationship, has its precise definition. Sex is the sudo command set, possessing the highest privilege to touch the core; love is the mutual entrustment of Root accounts; friendship consists of trusted users with specific advanced permissions. **We no longer talk about "right and wrong," but about "risk and cost," "configuration and compatibility," "vulnerabilities and patches."**
 
-我发现，当我们抽离了道德的评判，转而用系统管理员的视角去审视自身时，一种前所未有的清晰感和掌控感油然而生。我们不再是自身欲望的奴隶，而是可以主动维护、调试、升级自身系统的工程师。
+I discovered that when we detach from moral judgment and instead examine ourselves from the perspective of a system administrator, an unprecedented sense of clarity and control emerges. We are no longer slaves to our desires but engineers who can actively maintain, debug, and upgrade our own systems.
 
-从“性交易与体力劳动的区别”，到“友情与爱情的边界”，再到“如何面对工作中的情感诱惑”，这个强大的模型，为我们一路披荆斩棘。
+From the "difference between sex work and manual labor," to the "boundary between friendship and love," to "how to face emotional temptations at work," this powerful model has cleared the way for us.
 
-我决定将这次思想的探险完整记录下来，分享给同样在情感迷雾中寻求光亮的你。本书将重现我与AI的对话脉络，希望这套独特的思维工具，也能为你带来启发。
+I decided to document this intellectual adventure in its entirety, to share it with you who are also seeking light in the fog of emotions. This book will reconstruct the thread of my dialogue with the AI, hoping that this unique set of thinking tools can also bring you inspiration.
 
-—— sealeelike  
+— sealeelike  
 2025.07.08
 
 ---
 
-## Contents / 目录
+## Contents
 
 {% for part in site.data.parts | sort: "id" %}
 
-### 第 {{ part.id }} 部分：{{ part.title }}
+### Part {{ part.id }}: {{ part.title[page.lang] }}
 
-{{ part.overview | markdownify }}
+{{ part.overview[page.lang] | markdownify }}
 
 <ul>
-  {% assign chapters_in_this_part = site.chapters | where: "part_number", part.id | sort: "chapter_number" %}
+  {% assign chapters_in_this_part = site.chapters | where: "part_number", part.id | where: "lang", page.lang | sort: "chapter_number" %}
   {% for chapter in chapters_in_this_part %}
     <li>
       <a href="{{ site.baseurl }}{{ chapter.url }}">
-        第 {{ chapter.chapter_number }}章: {{ chapter.title }}
+        Chapter {{ chapter.chapter_number }}: {{ chapter.title }}
       </a>
     </li>
   {% endfor %}
@@ -50,7 +51,8 @@ title: "Admin's Intimacy" # 这个title会显示在浏览器的标签页上
 This work is licensed under [Attribution-NonCommercial-NoDerivatives 4.0 International](./LICENSE).  
 © {% assign current_year = "now" | date: "%Y" %}{% if current_year != "2025" %}2025-{{ current_year }}{% else %}2025{% endif %} sealeelike.
 
-**版权声明**
+---
 
-本作品采用[知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](./LICENSE)进行许可。  
-© {% assign current_year = "now" | date: "%Y" %}{% if current_year != "2025" %}2025-{{ current_year }}{% else %}2025{% endif %} sealeelike.
+<div class="contact-info">
+  <p>My GitHub Project: <a href="https://github.com/sealeelike/Admin-s-Intimacy">Admin-s-Intimacy</a></p>
+</div>

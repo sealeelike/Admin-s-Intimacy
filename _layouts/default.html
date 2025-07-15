@@ -12,6 +12,15 @@
   </head>
   <body>
     <div class="wrapper">
+      <div style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 8px 12px; background-color: rgba(255, 255, 255, 0.8); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
+    {% if page.lang == 'en' %}
+        {% assign target_url = page.url | replace_first: '/', '/cn/' %}
+        <strong>English</strong> | <a href="{{ site.baseurl }}{{ target_url }}">中文</a>
+    {% elsif page.lang == 'cn' %}
+        {% assign target_url = page.url | replace_first: '/cn/', '/' %}
+        <a href="{{ site.baseurl }}{{ target_url }}">English</a> | <strong>中文</strong>
+    {% endif %}
+</div>
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
