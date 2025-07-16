@@ -1,5 +1,138 @@
 /* assets/css/custom.css */
+/* ==========================================================================
+   常用HTML元素标签参考 (Common HTML Elements Reference)
+   根据当前项目结构整理，并包含其他常用标签，方便快速查找和应用样式。
+   ========================================================================== */
 
+/* --- 1. 页面结构 (Page Structure) --- */
+/*
+ * body: 整个页面内容区域。
+ *       常用CSS: font-family, color, background-color, line-height, margin
+ *
+ * div: 最常用的块级容器，用于布局和分组。
+ *      常用CSS: display, margin, padding, border, width, height
+ *
+ * header: 页面或区域的头部。
+ *
+ * footer: 页面或区域的底部。
+ *
+ * section: 页面中的一个独立部分或主题区域。
+ *
+ * main: 页面的主要内容区域 (一个页面通常只有一个)。
+ *
+ * nav: 导航链接区域。
+ */
+
+
+/* --- 2. 文本内容 (Text Content) --- */
+/*
+ * h1, h2, h3, h4, h5, h6: 标题标签，从大到小。
+ *      常用CSS: font-size, font-weight, color, line-height, margin-top/bottom
+ *
+ * p: 段落 (Paragraph)，最基本的文本块。
+ *    常用CSS: margin-bottom, line-height
+ *
+ * a: 链接 (Anchor)。
+ *    常用CSS: color, text-decoration, :hover, :visited
+ *
+ * strong: 表示内容“重要”，浏览器默认加粗。
+ *
+ * b: 纯粹视觉上的“加粗”，无语义。
+ *
+ * em: 表示“强调”，浏览器默认斜体 (Emphasis)。
+ *
+ * i: 纯粹视觉上的“斜体”，无语义 (Italic)。
+ *
+ * span: 行内小容器，用于给一小段文字单独加样式，无特殊语义。
+ *
+ * small: 小号字体，通常用于附属信息，如版权声明。
+ *
+ * code: 用于显示一小段代码。
+ *
+ * pre: 用于显示一大段预格式化的文本或代码块，会保留空格和换行。
+ */
+
+
+/* --- 3. 列表 (Lists) --- */
+/*
+ * ul: 无序列表 (Unordered List)，项目前是圆点。
+ *
+ * ol: 有序列表 (Ordered List)，项目前是数字。
+ *
+ * li: 列表项 (List Item)，必须在 ul 或 ol 内部。
+ *     常用CSS: margin-bottom, list-style-type
+ */
+
+
+/* --- 4. 其他元素 (Other Elements) --- */
+/*
+ * hr: 水平分割线 (Horizontal Rule)。
+ *     常用CSS: border, height, background-color, margin
+ *
+ * br: 强制换行 (Line Break)。
+ *
+ * img: 图像 (Image)。
+ *      常用CSS: max-width, display: block, border-radius
+ *
+ * table, thead, tbody, tr, th, td: 表格相关元素。
+ */
+:root {
+  --color-text: #474b56; /* 基础文字颜色 */
+  --color-background: #d0d9e4;
+  --color-primary: #3a82f6; /* 充满活力的蓝色，用于链接和主要按钮 */
+  --color-secondary: #6516d4; /* 温和的紫色，用于标签或次要信息 */
+  --color-border: #dee2e6; /* 低调的边框和分割线颜色 */
+  --color-heading: #343a40; /* 标题颜色，比正文更深一点以示强调 */
+}
+
+/* * ==========================================
+ * 全局样式应用
+ * ==========================================
+ */
 body {
-  color: #474b56;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  line-height: 1.75; /* 增加行高，提升大段文字的可读性 */
+  background-color: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased; /* 在 Chrome/Safari 中让字体更平滑 */
+  -moz-osx-font-smoothing: grayscale; /* 在 Firefox 中让字体更平滑 */
+  text-rendering: optimizeLegibility;
+}
+
+/* * ==========================================
+ * 具体元素样式
+ * ==========================================
+ */
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+  line-height: 1.4; /* 标题行高可以略小 */
+}
+
+/* 链接样式 */
+a {
+  color: var(--color-primary);
+  text-decoration: none; /* 去掉下划线，更现代 */
+  transition: color 0.25s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline; /* 鼠标悬停时显示下划线作为反馈 */
+}
+
+
+
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }

@@ -50,9 +50,3 @@ I decided to document this intellectual adventure in its entirety, to share it w
 
 This work is licensed under [Attribution-NonCommercial-NoDerivatives 4.0 International](./LICENSE).  
 © {% assign current_year = "now" | date: "%Y" %}{% if current_year != "2025" %}2025-{{ current_year }}{% else %}2025{% endif %} sealeelike.
-
----
-
-<div class="contact-info">
-  <p>My GitHub Project: <a href="https://github.com/sealeelike/Admin-s-Intimacy">Admin-s-Intimacy</a></p>
-</div>

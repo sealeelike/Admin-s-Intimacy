@@ -48,11 +48,6 @@ lang: cn
 
 **版权声明**
 
-本作品采用[知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](./LICENSE)进行许可。  
-© {% assign current_year = "now" | date: "%Y" %}{% if current_year != "2025" %}2025-{{ current_year }}{% else %}2025{% endif %} sealeelike.
+本作品采用[知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans)进行许可。  
+© {% assign current_year = "now" | date: "%Y" %}{% if current_year != "2025" %}2025-{{ current_year }}{% else %}2025{% endif %} [sealeelike](https://github.com/sealeelike).
 
----
-
-<div class="contact-info">
-  <p>我的 GitHub 项目: <a href="https://github.com/sealeelike/Admin-s-Intimacy">Admin-s-Intimacy</a></p>
-</div>
