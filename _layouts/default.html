@@ -62,9 +62,6 @@
           © {% assign current_year = "now" | date: "%Y" %}{% if site.start_year and site.start_year != current_year %}{{ site.start_year }}–{{ current_year }}{% else %}{{ current_year }}{% endif %} <a href="https://github.com/sealeelike" target="_blank" rel="noopener noreferrer">sealeelike</a>.
         <small></p>
 
-        {% if site.github.is_project_page %}
-        <p class="project-maintainer">This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
         <p class="theme-credit"><small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
