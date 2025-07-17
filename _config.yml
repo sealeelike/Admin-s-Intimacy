@@ -9,6 +9,7 @@ theme: jekyll-theme-minimal
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
   
 copyright: "© 2025 sealeelike. Licensed under CC BY-NC-ND 4.0."
 
