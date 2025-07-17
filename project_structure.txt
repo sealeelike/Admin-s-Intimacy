@@ -31,6 +31,8 @@ C:/Users/SeaLee/Desktop/book/Admin-s-Intimacy/
 │   └───default.html
 ├───assets/
 │   └───css/
-│       └───custom.css
+│   │   └───custom.css
+│   └───images/
+│       └───11.jpg
 └───cn/
     └───index.md
