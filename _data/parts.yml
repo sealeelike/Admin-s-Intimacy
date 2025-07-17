@@ -15,3 +15,11 @@
   overview:
     cn: "本部分是全书的“华彩乐章”。我们将系统性地揭示整个情感操作系统的世界观，将之前零散的线索串联成一个逻辑自洽、威力巨大的解释框架。"
     en: "This part is the 'grand movement' of the book. We will systematically unveil the worldview of the entire emotional operating system, connecting the previously scattered clues into a logically self-consistent and powerful explanatory framework."
+
+- id: 3
+  title:
+    cn: "其他"
+    en: "Others"
+  overview:
+    cn: "补充一些题外话"
+    en: "Add some topics other than the core"
