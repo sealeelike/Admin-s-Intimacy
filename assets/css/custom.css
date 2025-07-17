@@ -83,6 +83,8 @@
   --color-secondary: #6516d4; /* 温和的紫色，用于标签或次要信息 */
   --color-border: #dee2e6; /* 低调的边框和分割线颜色 */
   --color-heading: #343a40; /* 标题颜色，比正文更深一点以示强调 */
+  --color-code-background-inline: rgba(118, 168, 135, 0.259); /* 行内代码的背景色 */
+  --color-code-text-inline: #43144b;      /* 行内代码的文字颜色 (可选，可保持默认) */
 }
 
 /* * ==========================================
@@ -135,4 +137,16 @@ a:hover {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; /* 使用等宽字体 */
+  font-size: 0.85em;   /* 字体大小：0.9em 表示其大小为父元素（比如段落<p>）字体大小的90%。这样它会比普通文本稍微小一点，看起来更精致。*/
+  padding: 0.1em 0.2em;/* 内边距：在文字和背景边框之间增加空间。*/
+  margin: 0 0.1em;/* 外边距：在元素外部增加空间。 这里只设置了 0.1em 的左右外边距，防止它和旁边的普通文字挤在一起。*/
+  background-color: var(--color-code-background-inline);
+  border-radius: 5px;
+
+  color: var(--color-code-text-inline);
 }
