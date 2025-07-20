@@ -1,0 +1,85 @@
+Chapter Index and Core Concepts
+
+---
+
+### Part 1: Establishing the Core Model
+
+**Chapter 1: The Starting Point — Is Prostitution a Reasonable Transaction?**
+- **Summary:** The book opens by challenging the idea of prostitution as a simple transaction. It introduces the AI's counterarguments regarding the sex worker's consent, the objectification and power dynamics inherent in the act, and the negative impact on the buyer. This sets the stage for the central question: What makes sex fundamentally different from other services?
+- **Core Concepts:** Objectification, Power Imbalance, Consent, The Special Nature of Sex.
+
+**Chapter 2: Is the Body a Tool or a Product?**
+- **Summary:** This chapter deepens the analysis by comparing sex work to manual labor and massage. It establishes a key distinction between selling a separable product of one's body versus selling direct access to the body itself. It introduces the first major metaphor of the "Self-House," where sex is granting access to the innermost "bedroom."
+- **Core Concepts:** Separability of Labor, The "Self-House" Metaphor, Psychological Dissociation.
+
+**Chapter 3: `sudo` — The Supreme Command to the Kernel**
+- **Summary:** This is the pivotal chapter where the book's central analogy is formally established. The "Self-House" is upgraded to a more precise computer system model. The chapter argues why this analogy is valid from biological, psychological, and social standpoints.
+- **Core Concepts:**
+    - **Sex = `sudo` (Root Access):** A command with the highest privilege to access and modify the core self.
+    - **Ordinary Services = `venv` (Virtual Environment):** Isolated, sandboxed processes that cannot harm the core system.
+    - **Proof:** Biological (hormones, vagus nerve), Psychological (embodied cognition), Social (defining core relationships).
+
+**Chapter 4: Kernel Panic — When "Applications" Can Cause Fatal Damage**
+- **Summary:** The model is stress-tested with a paradox: how can ordinary work (a `venv` application) sometimes cause deep trauma (like PTSD)? The model is refined to explain these cases.
+- **Core Concepts:**
+    - **Trauma from Abuse:** A "Privilege Escalation" attack that exploits a system vulnerability.
+    - **Trauma from Loss:** The failure of a "Critical System Service" that the kernel has become dependent on.
+    - **Key Distinction:** Harm from sex is a **Feature** of its design; harm from work is a **Bug** or an accident.
+
+---
+
+### Part 2: Applying and Expanding the Model
+
+**Chapter 5: The Binary World of Root Users and Sudo Users — Love vs. Friendship**
+- **Summary:** The model is used to define and differentiate core human relationships with a clear hierarchy of trust and privilege.
+- **Core Concepts:**
+    - **Love = Exchanging `Root User` Accounts:** Forming a high-availability "server cluster" with another person.
+    - **Friendship = Granting `Sudo User` Privileges:** Giving a trusted individual specific, high-level administrative rights.
+
+**Chapter 6: The Battle of Offense and Defense — Guarding Against Infidelity**
+- **Summary:** This chapter applies the model to cheating and other complex relationship dynamics, analyzing them as system security breaches.
+- **Core Concepts:**
+    - **Physical Infidelity:** A "malicious, unauthorized hardware-level attack."
+    - **Emotional Infidelity:** A "covert remote privilege escalation and core data theft."
+    - **Partner Swapping (Swinging):** A form of consensual, high-risk "plugin development" by system co-admins.
+
+**Chapter 7: Alarms in the `venv` — "You Have Crossed the Line"**
+- **Summary:** Provides a practical guide for identifying and managing boundary-crossing behavior in daily interactions to prevent infidelity. It explains why people often ignore these warning signs.
+- **Core Concepts:** Threat Detection Guide (Info, Warning, Alert levels), Cognitive Dissonance, Relationship Maintenance as System Administration (syncing firewalls, setting boundaries).
+
+**Chapter 8: The Administrator's Dilemma — The Next One is Better**
+- **Summary:** Tackles the question of whether to leave a current partner for a new, seemingly "better" one. It frames this as a "system migration" decision, highlighting the immense costs and the logical paradox of testing a new partner.
+- **Core Concepts:** The "Pressure Test Paradox," "Demo Mode" vs. "Full Load," calculating "Migration Costs," analyzing a potential partner via their "public logs."
+
+**Chapter 9: From Decommissioning to Deployment — The Breakup/Divorce**
+- **Summary:** Models the entire lifecycle of ending one relationship and starting another. It emphasizes that this is a serial process, not a parallel one.
+- **Core Concepts:**
+    - **Breakup:** A "Server Decommissioning" process followed by a critical "Standalone Maintenance Period" (healing).
+    - **Dating:** A "Due Diligence" and "Gradual Privilege Escalation" process before granting full `Root` access.
+
+**Chapter 10: The Trouble with Historical Logs — My Partner Isn't a Virgin/My First Love**
+- **Summary:** Addresses jealousy and insecurity related to a partner's past sexual history.
+- **Core Concepts:**
+    - **Virginity Complex:** A foolish "superstition about factory settings."
+    - **Retroactive Jealousy:** A futile "war against a ghost backup file."
+    - **Mature Goal:** Shifting focus from being the "First Admin" to being the "Last Admin."
+
+**Chapter 11: The Temptation of the Simulator — A Partner Watching Porn**
+- **Summary:** Analyzes pornography consumption within a relationship, diagnosing it as either a benign supplement or a harmful substitute for real intimacy, with deception being the key differentiator.
+- **Core Concepts:** Porn as a "Standalone Simulator" that offers low cost, absolute control, and supernormal stimulus, allowing an escape from the risks and complexities of real connection.
+
+**Chapter 12: The Ancient BIOS — The Underlying Logic of Loveless Sex**
+- **Summary:** Explains the powerful drive for casual, loveless sex, even when it contradicts the model's logic. It attributes this to a conflict between our rational minds and more primitive drives.
+- **Core Concepts:** A combination of 1) **Firmware-level urges** (evolutionary drive), 2) **User-level needs** (using sex to solve non-sexual problems like loneliness), and 3) **System vulnerabilities** (dopamine hijacking).
+
+**Chapter 13: The Principle of Least Privilege — "Celibacy, Don't Do It"?**
+- **Summary:** Examines the philosophy of complete abstinence (戒色) as a response to the risks of sexuality. It frames it as a well-intentioned but ultimately harmful "scorched-earth policy."
+- **Core Concepts:** Celibacy as running the system in "Safe Mode." It misdiagnoses the problem (blaming the tool, not the user's skill) and leads to the atrophy of core functions. The goal is to **master power**, not eliminate it.
+
+---
+
+### Part 3: Reflection and Conclusion
+
+**Chapter 14: Aren't You Objectifying People?**
+- **Summary:** A final, meta-level reflection on the book's own methodology. It confronts the charge of "objectification" and argues that the model, while using a "cold" language, is ultimately a tool for "anti-objectification"—to defend the profound and irreplaceable value of the human person.
+- **Core Concepts:** Using a "thing" (a machine model) to defend the value of the "person." A final summary of the entire argument and a helpful quick-reference table of all core concepts.

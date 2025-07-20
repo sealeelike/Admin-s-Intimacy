@@ -1,0 +1,37 @@
+Project Manual: "Admin's Intimacy" Translation
+
+### 1. Project Overview
+- **Core Concept:** The book uses a detailed and consistent computer science analogy to analyze human relationships, love, and sexuality.
+- **Objective:** To translate the Chinese text into English, preserving its unique analytical style, logical rigor, and the integrity of its core metaphors.
+- **Target Audience:** Intellectually curious readers, likely with some familiarity with tech concepts, who are interested in psychology, philosophy, and unconventional frameworks for understanding human behavior.
+
+### 2. Core Translation Strategy: The Central Analogy
+This is the most critical aspect of the project.
+- **Key Terms (`sudo`, `root`, `kernel`, `venv`, etc.):** These terms should be **kept in English**. They are standard in computer science globally. The focus must be on flawlessly translating the *explanation and application* of these terms to human emotions. A glossary might be useful, but the text itself should be clear enough.
+- **Consistency:** The meaning and application of each metaphor must remain consistent throughout the book. For example, `sudo` is always a high-privilege *action*, while `root` is a high-privilege *user/status*. This distinction is crucial.
+- **Avoid Simplification:** Do not replace the specific technical terms with generic phrases like "admin power" or "special connection." The specificity is the source of the book's analytical power.
+
+### 3. Tone and Style
+- **Maintain a Logical, Analytical Voice:** The original text is detached, rational, and almost clinical. The English translation must replicate this tone. Avoid injecting sentimentality or overly emotional language. The goal is to sound like a tech-savvy philosopher, not a romance novelist.
+- **Clarity and Precision:** The arguments are structured like a logical proof. The language must be precise and unambiguous to support this structure.
+
+### 4. Potential Challenges and Solutions
+- **Conceptual Accuracy:**
+    - **Challenge:** The text uses specific psychological and philosophical concepts (e.g., 认知失调 - Cognitive Dissonance, 具身认知 - Embodied Cognition).
+    - **Solution:** Use the established, correct English terminology for these concepts. This requires careful research to ensure 1:1 accuracy.
+- **Cultural Nuances:**
+    - **Challenge:** Some examples or social norms discussed (e.g., the specific flavor of "处女情结" - virginity complex) might have different connotations for a Western audience.
+    - **Solution:** Translate the concept's *function* within the argument. If a literal translation of an example feels alienating, consider a brief, non-intrusive explanatory note or a slight adaptation to a more universal scenario, but only if it doesn't compromise the author's point.
+- **Readability:**
+    - **Challenge:** A direct translation of the logical, sometimes dense, sentence structure could feel clunky in English.
+    - **Solution:** While preserving the logical flow, restructure sentences as needed to ensure they are fluid and natural in English. The goal is a text that is both intellectually rigorous and a pleasure to read.
+
+### 5. Pre-flight Checklist for Translation
+- [ ] Do I understand the precise meaning of the computer science term being used?
+- [ ] Do I understand how the author is applying it to the human emotion/situation?
+- [ ] Is my translation of the *explanation* clear, precise, and unambiguous?
+- [ ] Does the translated passage maintain the analytical and detached tone of the original?
+- [ ] Have I used the correct, established English term for any psychological or philosophical concepts?
+- [ ] Does the overall argument flow logically in English?
+
+By adhering to these guidelines, the translation will not only be a faithful rendering of the words but also a successful porting of the entire intellectual framework to a new language and audience.
