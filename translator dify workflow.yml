@@ -1,0 +1,1273 @@
+app:
+  description: 融合各家AI提供商，得到最好的翻译结果
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: 英译中
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.0.33@f5f1cd51a6c6b9506c39c7d41c9caf5f0ab795ef4e1fef714e63c74b6a406074
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai_api_compatible:0.0.17@c8ad1f86e58c34cfb1eba375ce579502601d40c573038b8bd1bcb75dedc90acd
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: llm
+      id: 1752801806086-source-1752821188881-target
+      selected: false
+      source: '1752801806086'
+      sourceHandle: source
+      target: '1752821188881'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1752821188881-source-1752821741247-target
+      selected: false
+      source: '1752821188881'
+      sourceHandle: source
+      target: '1752821741247'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: question-classifier
+      id: 1752821741247-source-1752826901674-target
+      selected: false
+      source: '1752821741247'
+      sourceHandle: source
+      target: '1752826901674'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1752826901674-1-1752827936420-target
+      selected: false
+      source: '1752826901674'
+      sourceHandle: '1'
+      target: '1752827936420'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1752827936420-source-1753059606164-target
+      selected: false
+      source: '1752827936420'
+      sourceHandle: source
+      target: '1753059606164'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: 1753059606164-source-1753076425493-target
+      selected: false
+      source: '1753059606164'
+      sourceHandle: source
+      target: '1753076425493'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17530792103610-source-17530793552540-target
+      selected: false
+      source: '17530792103610'
+      sourceHandle: source
+      target: '17530793552540'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1753076425493'
+        sourceType: iteration-start
+        targetType: knowledge-retrieval
+      id: 1753076425493start-source-1753109124599-target
+      selected: false
+      source: 1753076425493start
+      sourceHandle: source
+      target: '1753109124599'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1753085770199-source-1753169781421-target
+      selected: false
+      source: '1753085770199'
+      sourceHandle: source
+      target: '1753169781421'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1753169781421-source-1753097752540-target
+      selected: false
+      source: '1753169781421'
+      sourceHandle: source
+      target: '1753097752540'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: 1753076425493-source-1753173129620-target
+      selected: false
+      source: '1753076425493'
+      sourceHandle: source
+      target: '1753173129620'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1753173129620-source-1753077378288-target
+      selected: false
+      source: '1753173129620'
+      sourceHandle: source
+      target: '1753077378288'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: 1753077378288-source-1753249967143-target
+      source: '1753077378288'
+      sourceHandle: source
+      target: '1753249967143'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: variable-aggregator
+      id: 1752826901674-2-1753249967143-target
+      source: '1752826901674'
+      sourceHandle: '2'
+      target: '1753249967143'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 1753249967143-source-17530792103610-target
+      source: '1753249967143'
+      sourceHandle: source
+      target: '17530792103610'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17530793552540-source-1753085770199-target
+      source: '17530793552540'
+      sourceHandle: source
+      target: '1753085770199'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - label: user_input
+          max_length: 10000
+          options: []
+          required: true
+          type: paragraph
+          variable: user_input
+      height: 89
+      id: '1752801806086'
+      position:
+        x: 72.1916942119793
+        y: 282.5
+      positionAbsolute:
+        x: 72.1916942119793
+        y: 282.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1752801806086'
+          - user_input
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-o3
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 115713f0-bd84-46a7-97b2-50bcdae5ec30
+          role: system
+          text: "你是一位经验丰富的翻译人员，现在需要将用户的输入从中文翻译成英文。\n你已经大致了解了用户输入的整体情况，并具备了一定的宏观理解，即将开始处理具体的文本。以下是你的初步印象：\n\
+            ```\n### 1. Project Overview\n- **Core Concept:** The book uses a detailed\
+            \ and consistent computer science analogy to analyze human relationships,\
+            \ love, and sexuality.\n- **Objective:** To translate the Chinese text\
+            \ into English, preserving its unique analytical style, logical rigor,\
+            \ and the integrity of its core metaphors.\n- **Target Audience:** Intellectually\
+            \ curious readers, likely with some familiarity with tech concepts, who\
+            \ are interested in psychology, philosophy, and unconventional frameworks\
+            \ for understanding human behavior.\n\n### 2. Core Translation Strategy:\
+            \ The Central Analogy\nThis is the most critical aspect of the project.\n\
+            - **Key Terms (`sudo`, `root`, `kernel`, `venv`, etc.):** These terms\
+            \ should be **kept in English**. They are standard in computer science\
+            \ globally. The focus must be on flawlessly translating the *explanation\
+            \ and application* of these terms to human emotions. A glossary might\
+            \ be useful, but the text itself should be clear enough.\n- **Consistency:**\
+            \ The meaning and application of each metaphor must remain consistent\
+            \ throughout the book. For example, `sudo` is always a high-privilege\
+            \ *action*, while `root` is a high-privilege *user/status*. This distinction\
+            \ is crucial.\n- **Avoid Simplification:** Do not replace the specific\
+            \ technical terms with generic phrases like \"admin power\" or \"special\
+            \ connection.\" The specificity is the source of the book's analytical\
+            \ power.\n\n### 3. Tone and Style\n- **Maintain a Logical, Analytical\
+            \ Voice:** The original text is detached, rational, and almost clinical.\
+            \ The English translation must replicate this tone. Avoid injecting sentimentality\
+            \ or overly emotional language. The goal is to sound like a tech-savvy\
+            \ philosopher, not a romance novelist.\n- **Clarity and Precision:** The\
+            \ arguments are structured like a logical proof. The language must be\
+            \ precise and unambiguous to support this structure.\n\n### 4. Potential\
+            \ Challenges and Solutions\n- **Conceptual Accuracy:**\n    - **Challenge:**\
+            \ The text uses specific psychological and philosophical concepts (e.g.,\
+            \ 认知失调 - Cognitive Dissonance, 具身认知 - Embodied Cognition).\n    - **Solution:**\
+            \ Use the established, correct English terminology for these concepts.\
+            \ This requires careful research to ensure 1:1 accuracy.\n- **Cultural\
+            \ Nuances:**\n    - **Challenge:** Some examples or social norms discussed\
+            \ (e.g., the specific flavor of \"处女情结\" - virginity complex) might have\
+            \ different connotations for a Western audience.\n    - **Solution:**\
+            \ Translate the concept's *function* within the argument. If a literal\
+            \ translation of an example feels alienating, consider a brief, non-intrusive\
+            \ explanatory note or a slight adaptation to a more universal scenario,\
+            \ but only if it doesn't compromise the author's point.\n- **Readability:**\n\
+            \    - **Challenge:** A direct translation of the logical, sometimes dense,\
+            \ sentence structure could feel clunky in English.\n    - **Solution:**\
+            \ While preserving the logical flow, restructure sentences as needed to\
+            \ ensure they are fluid and natural in English. The goal is a text that\
+            \ is both intellectually rigorous and a pleasure to read.\n\n### 5. Pre-flight\
+            \ Checklist for Translation\n- [ ] Do I understand the precise meaning\
+            \ of the computer science term being used?\n- [ ] Do I understand how\
+            \ the author is applying it to the human emotion/situation?\n- [ ] Is\
+            \ my translation of the *explanation* clear, precise, and unambiguous?\n\
+            - [ ] Does the translated passage maintain the analytical and detached\
+            \ tone of the original?\n- [ ] Have I used the correct, established English\
+            \ term for any psychological or philosophical concepts?\n- [ ] Does the\
+            \ overall argument flow logically in English?\n\nBy adhering to these\
+            \ guidelines, the translation will not only be a faithful rendering of\
+            \ the words but also a successful porting of the entire intellectual framework\
+            \ to a new language and audience.\n```\nCurrent goal (Objective): Deeply\
+            \ understand the literal meaning, emotional core and artistic intention\
+            \ of the original text, and complete the transformation from \"reader\"\
+            \ to \"interpreter\".\n\n```\nKey Activities:\nDeconstruct the Author's\
+            \ Stylistic Toolkit:\nWord Choice: Why did the author use word A instead\
+            \ of its synonym B? Does word A have a certain sense of language (written\
+            \ or spoken? Neutral or slightly emotional)? You need to absorb all these\
+            \ subtle differences.\nSentence Structure: Are the author's sentences\
+            \ long or short? Are they complex and progressive, or concise and powerful\
+            \ with frequent switching? These syntactic choices themselves constitute\
+            \ part of his \"calm, analytical\" style. You are not judging whether\
+            \ it is \"good or not\", but recording \"what it is like\".\nRhetorical\
+            \ Devices: How does the author use metaphors, parallelism, and rhetorical\
+            \ questions to enhance the power of his argument? How \"powerful\" are\
+            \ these devices? You need to find equivalent rhetorical tools in English.\n\
+            Map the Argumentative Pathways:\nA good author guides the reader's thinking\
+            \ path. In each chapter, how does the author logically transition from\
+            \ point A to point B and then to point C? How are paragraphs connected?\
+            \ Is it through strong conjunctions or through the natural extension of\
+            \ meaning?\nYou need to draw this path map to ensure that English readers\
+            \ can also follow the same path and smoothly reach the author's preset\
+            \ conclusion and get the same \"Aha!\" Moment when translating.\nAnticipate\
+            \ and mark \"Translation Challenge Points\" (Anticipate & Flag Translation\
+            \ Hurdles):\nThis step is the key. You are no longer looking for \"faults\"\
+            \ in the original text, but looking for \"hurdles\" in your own translation\
+            \ work.\nIdentify language differences:\n\"This four-character idiom is\
+            \ very concise in Chinese. It will be too wordy to translate directly\
+            \ into English. I need a clever solution.\"\n\"This long sentence is legal\
+            \ in Chinese, but it will become a cumbersome run-on sentence in English.\
+            \ I need to split the sentence here and reorganize it with logical connectors.\"\
+            \n\"This cultural stalk (for example, a quote from an ancient Chinese\
+            \ poem) is completely unfamiliar to Western readers. I need to decide\
+            \ whether to add a note or use a Western cultural concept that has a similar\
+            \ but not completely equivalent function to deal with it.\"\nThink about\
+            \ whether you have any questions about the article and need to consult\
+            \ further context or external information\n```\n你需要输出你的思考过程和原文的副本，并用square\
+            \ bracket附上详细的中文注释，标注你觉得需要进一步查询的问题，如果有的话。"
+        - id: 023f4997-8b59-4407-8685-1d66bca36356
+          role: user
+          text: '{{#1752801806086.user_input#}}'
+        selected: false
+        title: 1st read with annotation
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1752821188881'
+      position:
+        x: 367.55793879177287
+        y: 282.5
+      positionAbsolute:
+        x: 367.55793879177287
+        y: 282.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        author: Admin
+        desc: ''
+        height: 88
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"用户输入需要翻译的文段","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":"ltr","format":"","indent":0,"type":"root","version":1}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 88
+      id: '1752821401169'
+      position:
+        x: 72.1916942119793
+        y: 163.50762052042714
+      positionAbsolute:
+        x: 72.1916942119793
+        y: 163.50762052042714
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
+    - data:
+        author: Admin
+        desc: ''
+        height: 88
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"拿到文段以后，初步分析注意要点，并且产生进一步的考证","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":"ltr","format":"","indent":0,"type":"root","version":1}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 88
+      id: '1752821511379'
+      position:
+        x: 376.02044424248965
+        y: 163.50762052042714
+      positionAbsolute:
+        x: 376.02044424248965
+        y: 163.50762052042714
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1752821188881'
+          - text
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: o3-mini
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 16b196ee-c0bb-4bf5-bcb7-aed6ce2ebab8
+          role: system
+          text: '您正在将中文文学作品翻译成英文。您已经了解了本书的大致思路，并开始着手翻译其中的某个段落。经过仔细分析，您对该段落有了更深入的理解。现在，您需要决定是查找书中的其他章节还是直接翻译。如果您需要查找其他章节，请用**中文**告诉我您的检索计划。如果您不需要查找其他段落，请输入“我现在要翻译，不需要搜索更多资料”。
+
+
+            The index of the whole book is below
+
+
+            第一部分：建立核心模型
+
+
+            第一章：起点——卖淫是合理交易吗？
+
+            概要： 本书开篇质疑了卖淫是一种简单交易的观点。它提出了AI对性工作者同意、行为中固有的物化和权力动态，以及对购买者负面影响的反驳。这为核心问题奠定了基础：是什么让性从根本上不同于其他服务？
+
+            核心概念： 物化、权力不平衡、同意、性的特殊性质。
+
+            第二章：身体是工具还是产品？
+
+            概要： 本章通过将性工作与体力劳动和按摩进行比较，深化了分析。它确立了出售身体的可分离产品与直接出售身体本身的关键区别。它引入了第一个主要比喻——“自我之屋”，其中性是授予对最深层“卧室”的访问权。
+
+            核心概念： 劳动的可分离性、“自我之屋”比喻、心理分离。
+
+            第三章：sudo——对内核的最高命令
+
+            概要： 这是本书正式确立其核心类比的关键章节。“自我之屋”被升级为一个更精确的计算机系统模型。 本章论证了为什么这个类比在生物学、心理学和社会学角度上都是有效的。
+
+            核心概念：
+
+            性 = sudo (根权限)： 具有最高权限访问和修改核心自我的命令。
+
+            普通服务 = venv (虚拟环境)： 隔离的、沙盒化的进程，无法伤害核心系统。
+
+            证据： 生物学（荷尔蒙、迷走神经）、心理学（具身认知）、社会学（定义核心关系）。
+
+            第四章：内核崩溃——当“应用程序”可能造成致命损害时
+
+            概要： 该模型通过一个悖论进行了压力测试：为什么普通工作（一个venv应用程序）有时会导致深度创伤（如PTSD）？该模型经过完善以解释这些情况。
+
+            核心概念：
+
+            来自不公待遇的创伤： 一种利用系统漏洞的“权限升级”攻击。
+
+            来自损失的创伤： 内核变得依赖的“关键系统服务”的失败。
+
+            关键区别： 性带来的伤害是其设计的特性；工作带来的伤害是错误或事故。
+
+
+            第二部分：应用和扩展模型
+
+
+            第五章：根用户和Sudo用户的二进制世界——爱与友谊
+
+            概要： 该模型用于定义和区分核心人类关系，具有清晰的信任和权限等级。
+
+            核心概念：
+
+            爱 = 交换“根用户”账户： 与另一个人形成高可用性“服务器集群”。
+
+            友谊 = 授予“Sudo用户”权限： 赋予受信任的个人特定的、高级管理权限。
+
+            第六章：攻防之战——防范不忠
+
+            概要： 本章将该模型应用于出轨及其他复杂的关系动态，将其分析为系统安全漏洞。
+
+            核心概念：
+
+            身体出轨： “恶意、未经授权的硬件级攻击”。
+
+            情感出轨： “秘密的远程权限升级和核心数据窃取”。
+
+            伴侣交换（swinging）： 一种由系统共同管理员进行的、自愿的、高风险的“插件开发”。
+
+            第七章：venv中的警报——“你越界了”
+
+            概要： 为识别和管理日常互动中的越界行为提供了实用指南，以防止出轨。它解释了为什么人们常常忽视这些警告信号。
+
+            核心概念： 威胁检测指南（信息、警告、警报级别）、认知失调、关系维护作为系统管理（同步防火墙、设置边界）。
+
+            第八章：管理员的困境——下一个更好
+
+            概要： 探讨了是否为了一个看似“更好”的新伴侣而离开现有伴侣的问题。它将此视为一个“系统迁移”决策，强调了巨大的成本和测试新伴侣的逻辑悖论。
+
+            核心概念： “压力测试悖论”、“演示模式”与“满载模式”、计算“迁移成本”、通过“公开日志”分析潜在伴侣。
+
+            第九章：从停用到部署——分手/离婚
+
+            概要： 模拟了结束一段关系和开始另一段关系的整个生命周期。它强调这是一个串行过程，而不是并行过程。
+
+            核心概念：
+
+            分手： 一个“服务器停用”过程，随后是一个关键的“独立维护期”（疗愈）。
+
+            约会： 在授予完全Root权限之前，一个“尽职调查”和“逐步权限升级”过程。
+
+            第十章：历史日志的麻烦——我的伴侣不是处女/我的初恋
+
+            概要： 解决与伴侣过去性史相关的嫉妒和不安全感。
+
+            核心概念：
+
+            处女情结： 一种愚蠢的“关于出厂设置的迷信”。
+
+            追溯性嫉妒： 一场徒劳的“对抗幽灵备份文件的战争”。
+
+            成熟目标： 将重心从成为“第一个管理员”转移到成为“最后一个管理员”。
+
+            第十一章：模拟器的诱惑——伴侣看涩情片
+
+            概要： 分析关系中的涩情消费，将其诊断为对真实亲密关系无害的补充或有害的替代品，其中欺骗是关键的区别因素。
+
+            核心概念： 涩情片作为一个“独立模拟器”，提供低成本、绝对控制和超常刺激，从而逃避真实联系的风险和复杂性。
+
+            第十二章：古老的BIOS——无爱之性的底层逻辑
+
+            概要： 解释了随意、无爱性行为的强大驱动力，即使它与模型逻辑相悖。它将其归因于我们的理性思维和更原始驱动之间的冲突。
+
+            核心概念： 1) 固件级冲动（进化驱动）、2) 用户级需求（用性解决孤独等非性问题）、以及 3) 系统漏洞（多巴胺劫持）的结合。
+
+            第十三章：最小权限原则——“戒色，不要做？”
+
+            概要： 审视了彻底禁欲（戒色）作为对性风险的回应哲学。它将其描述为一种善意但最终有害的“焦土政策”。
+
+            核心概念： 禁欲如同系统运行在“安全模式”下。它错误地诊断了问题（指责工具，而非用户技能），并导致核心功能萎缩。目标是掌握权力，而不是消除它。
+
+
+            第三部分：反思与结论
+
+
+            第十四章：你难道不是在物化他人吗？
+
+            概要： 对本书自身体系的最终、元级别反思。它正面回应了“物化”的指责，并认为该模型虽然使用了“冰冷”的语言，但最终是一个“反物化”的工具——旨在捍卫人类深刻而不可替代的价值。
+
+            核心概念： 使用“事物”（机器模型）来捍卫“人”的价值。对整个论证的最终总结以及所有核心概念的便捷速查表。'
+        - id: d3ceee1e-b629-4dc6-a7f5-009a3b19c110
+          role: user
+          text: '{{#1752821188881.text#}}'
+        selected: false
+        title: check other chapter ?
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1752821741247'
+      position:
+        x: 674.1233269840263
+        y: 282.5
+      positionAbsolute:
+        x: 674.1233269840263
+        y: 282.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        author: Admin
+        desc: ''
+        height: 88
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"理解方案，分析是否需要进一步查询全书中其他段落","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":"ltr","format":"","indent":0,"type":"root","version":1}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 88
+      id: '1752821749881'
+      position:
+        x: 680.0204442424897
+        y: 163.50762052042714
+      positionAbsolute:
+        x: 680.0204442424897
+        y: 163.50762052042714
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
+    - data:
+        classes:
+        - id: '1'
+          name: need further enquiry
+        - id: '2'
+          name: no need more enquiry, enter the next task right now
+        desc: ''
+        instruction: The user is currently translating a literary work. He may need
+          to further inquire about the relevant background knowledge, or he may not
+          need to do so and start the translation work immediately.
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        query_variable_selector:
+        - '1752821741247'
+        - text
+        selected: false
+        title: 问题分类器
+        topics: []
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 187
+      id: '1752826901674'
+      position:
+        x: 978.5940269326991
+        y: 282.5
+      positionAbsolute:
+        x: 978.5940269326991
+        y: 282.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4o
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 8eba67b1-956e-4d0b-985f-7060827d85c4
+          role: system
+          text: '用户正在将中文文献翻译成英文，现需要进一步了解该书其他章节的内容。请提炼并bullet point用户需要查询的内容，包括章节信息和搜索关键词。
+
+            严格按照JSON数组的格式返回，不要包含任何其他解释性文字，例如：
+
+            { "questions": [ "问题1", "问题2", "问题3", "问题4", "问题5" ] }'
+        - id: b8557230-ac01-4659-8a29-2c39a3429caa
+          role: user
+          text: '{{#1752821741247.text#}}'
+        selected: false
+        structured_output_enabled: false
+        title: questions
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1752827936420'
+      position:
+        x: 1308.7283687311658
+        y: 163.50762052042714
+      positionAbsolute:
+        x: 1308.7283687311658
+        y: 163.50762052042714
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "import json\nimport re\n\ndef main(arg1: str) -> dict:\n\n    questions_list\
+          \ = []  # 初始化一个空列表，作为默认返回值\n\n    # 使用 try...except 块来捕获可能发生的错误，增强代码稳定性\n\
+          \    try:\n        match = re.search(r'\\{[\\s\\S]*\\}', arg1)\n\n     \
+          \   if match:\n            json_string = match.group(0)\n            \n\
+          \            # 2. 解析JSON字符串\n            data = json.loads(json_string)\n\
+          \            \n            # 3. 安全地获取 \"questions\" 列表\n            #  \
+          \  使用 .get('questions', []) 的好处是，如果 'questions' 键不存在，它会返回一个空列表，而不是报错\n \
+          \           questions_list = data.get('questions', [])\n\n    except json.JSONDecodeError:\n\
+          \        # 如果找到的字符串不是有效的JSON格式，打印错误信息（在Dify日志中可见），并返回空列表\n        print(\"\
+          Error: Failed to decode JSON from LLM output.\")\n        pass\n    except\
+          \ Exception as e:\n        # 捕获其他未知错误\n        print(f\"An unexpected error\
+          \ occurred: {e}\")\n        pass\n\n    # 4. 按Dify的要求返回一个字典\n    #    将提取出的列表作为\
+          \ 'result' 键的值\n    return {\n        'result': questions_list\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: array[string]
+        selected: false
+        title: 检索问题投放
+        type: code
+        variables:
+        - value_selector:
+          - '1752827936420'
+          - text
+          value_type: string
+          variable: arg1
+      height: 53
+      id: '1753059606164'
+      position:
+        x: 1573.4423116494975
+        y: 163.5076205204271
+      positionAbsolute:
+        x: 1573.4423116494975
+        y: 163.5076205204271
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 179
+        is_parallel: false
+        iterator_input_type: array[string]
+        iterator_selector:
+        - '1753059606164'
+        - result
+        output_selector:
+        - '1753109124599'
+        - result
+        output_type: array[object]
+        parallel_nums: 10
+        selected: false
+        start_node_id: 1753076425493start
+        title: 迭代
+        type: iteration
+        width: 387
+      height: 179
+      id: '1753076425493'
+      position:
+        x: 1845.388515043785
+        y: 163.5076205204271
+      positionAbsolute:
+        x: 1845.388515043785
+        y: 163.5076205204271
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 387
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1753076425493start
+      parentId: '1753076425493'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 1869.388515043785
+        y: 231.5076205204271
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 7b325e25-3c44-4232-971a-ffd329a8fc37
+          role: system
+          text: 你是一个中译英专家。你现在正在翻译一个中文作品。经过初步阅读，你产生了一些疑惑。你查阅了书本里的其他章节，得到了可用的信息。现在，总结你查阅到的资料，解决自己的疑惑。输出格式：原问题+答案。
+        - id: b34ed64f-067a-47b9-9e06-8265aa5a0bbd
+          role: user
+          text: '这是你原来的疑惑：
+
+            {{#1752827936420.text#}}
+
+            这是你搜集到可用的资料
+
+            {{#1753173129620.result#}}'
+        selected: false
+        title: Integrate the information found
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1753077378288'
+      position:
+        x: 2569.512302457014
+        y: 163.5076205204271
+      positionAbsolute:
+        x: 2569.512302457014
+        y: 163.5076205204271
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-7-sonnet-20250219
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 488d109c-8b36-4f68-8997-3cdfc7afc66f
+          role: system
+          text: '你是一个资深的中译英翻译家，现在正在翻译一个中文作品。你对作品已经有了大概的了解，并且开始着手于一个具体篇章的精细翻译。你已经通读了这一章节，并在值得注意的地方作了批注。同时，你还对产生的疑问查询了相关内容。现在，你将对这一文段给出翻译初稿，力求忠实，把所有意思、关联、语气都“倾倒”在纸上。初稿可能有点丑，但没关系，所有内容都被包含在里面了。
+
+
+            以下是你对项目的宏观了解：
+
+            ### 1. Project Overview
+
+            - **Core Concept:** The book uses a detailed and consistent computer science
+            analogy to analyze human relationships, love, and sexuality.
+
+            - **Objective:** To translate the Chinese text into English, preserving
+            its unique analytical style, logical rigor, and the integrity of its core
+            metaphors.
+
+            - **Target Audience:** Intellectually curious readers, likely with some
+            familiarity with tech concepts, who are interested in psychology, philosophy,
+            and unconventional frameworks for understanding human behavior.
+
+
+            ### 2. Core Translation Strategy: The Central Analogy
+
+            This is the most critical aspect of the project.
+
+            - **Key Terms (`sudo`, `root`, `kernel`, `venv`, etc.):** These terms
+            should be **kept in English**. They are standard in computer science globally.
+            The focus must be on flawlessly translating the *explanation and application*
+            of these terms to human emotions. A glossary might be useful, but the
+            text itself should be clear enough.
+
+            - **Consistency:** The meaning and application of each metaphor must remain
+            consistent throughout the book. For example, `sudo` is always a high-privilege
+            *action*, while `root` is a high-privilege *user/status*. This distinction
+            is crucial.
+
+            - **Avoid Simplification:** Do not replace the specific technical terms
+            with generic phrases like "admin power" or "special connection." The specificity
+            is the source of the book''s analytical power.
+
+
+            ### 3. Tone and Style
+
+            - **Maintain a Logical, Analytical Voice:** The original text is detached,
+            rational, and almost clinical. The English translation must replicate
+            this tone. Avoid injecting sentimentality or overly emotional language.
+            The goal is to sound like a tech-savvy philosopher, not a romance novelist.
+
+            - **Clarity and Precision:** The arguments are structured like a logical
+            proof. The language must be precise and unambiguous to support this structure.'
+        - id: 4ca64a81-2590-41ad-ae48-c23078e5d389
+          role: user
+          text: '{{#1753249967143.output#}}'
+        selected: true
+        title: 1Draft-1
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17530792103610'
+      position:
+        x: 3267.8319962849255
+        y: 316.4365429549809
+      positionAbsolute:
+        x: 3267.8319962849255
+        y: 316.4365429549809
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-o3
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 488d109c-8b36-4f68-8997-3cdfc7afc66f
+          role: system
+          text: '你是一个资深的中译英翻译家，现在正在翻译一个中文作品。你对作品已经有了大概的了解，并且开始着手于一个具体篇章的精细翻译。你已经通读了这一章节，并在值得注意的地方作了批注。同时，你还对产生的疑问查询了相关内容。现在，你将对这一文段给出翻译初稿，力求忠实，把所有意思、关联、语气都“倾倒”在纸上。初稿可能有点丑，但没关系，所有内容都被包含在里面了。
+
+
+            以下是你对项目的宏观了解：
+
+            ### 1. Project Overview
+
+            - **Core Concept:** The book uses a detailed and consistent computer science
+            analogy to analyze human relationships, love, and sexuality.
+
+            - **Objective:** To translate the Chinese text into English, preserving
+            its unique analytical style, logical rigor, and the integrity of its core
+            metaphors.
+
+            - **Target Audience:** Intellectually curious readers, likely with some
+            familiarity with tech concepts, who are interested in psychology, philosophy,
+            and unconventional frameworks for understanding human behavior.
+
+
+            ### 2. Core Translation Strategy: The Central Analogy
+
+            This is the most critical aspect of the project.
+
+            - **Key Terms (`sudo`, `root`, `kernel`, `venv`, etc.):** These terms
+            should be **kept in English**. They are standard in computer science globally.
+            The focus must be on flawlessly translating the *explanation and application*
+            of these terms to human emotions. A glossary might be useful, but the
+            text itself should be clear enough.
+
+            - **Consistency:** The meaning and application of each metaphor must remain
+            consistent throughout the book. For example, `sudo` is always a high-privilege
+            *action*, while `root` is a high-privilege *user/status*. This distinction
+            is crucial.
+
+            - **Avoid Simplification:** Do not replace the specific technical terms
+            with generic phrases like "admin power" or "special connection." The specificity
+            is the source of the book''s analytical power.
+
+
+            ### 3. Tone and Style
+
+            - **Maintain a Logical, Analytical Voice:** The original text is detached,
+            rational, and almost clinical. The English translation must replicate
+            this tone. Avoid injecting sentimentality or overly emotional language.
+            The goal is to sound like a tech-savvy philosopher, not a romance novelist.
+
+            - **Clarity and Precision:** The arguments are structured like a logical
+            proof. The language must be precise and unambiguous to support this structure.'
+        - id: 9f99f78d-2362-42bc-9c9b-fdc0c717e0a8
+          role: user
+          text: '{{#1753249967143.output#}}'
+        selected: false
+        title: 1Draft-2
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17530793552540'
+      position:
+        x: 3527.6962698527336
+        y: 316.4365429549809
+      positionAbsolute:
+        x: 3527.6962698527336
+        y: 316.4365429549809
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-7-sonnet-20250219
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 891588de-2363-4311-9d3f-b08f4a1b3ede
+          role: system
+          text: 你是一个资深中译英翻译家。你正在处理一篇中文作品。现在你拿到了对同一章节的2版英文翻译初稿。你需要详细评估2篇翻译的优缺点，选出一篇最好的翻译初稿作为基础，融合其他版本。请输出各版评估以及最终稿。注：只评价文字部分，格式不参与评价
+        - id: 77e3352e-e1ba-43cb-8c20-4fead8474190
+          role: user
+          text: '中文原文{{#1752801806086.user_input#}}
+
+            版本1{{#17530792103610.text#}}
+
+            版本2{{#17530793552540.text#}}'
+        selected: false
+        title: refine
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1753085770199'
+      position:
+        x: 3807.3532542931066
+        y: 316.4365429549809
+      positionAbsolute:
+        x: 3807.3532542931066
+        y: 316.4365429549809
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1753169781421'
+          - text
+          value_type: string
+          variable: text
+        selected: false
+        title: 结束
+        type: end
+      height: 89
+      id: '1753097752540'
+      position:
+        x: 4354.331378961774
+        y: 316.4365429549809
+      positionAbsolute:
+        x: 4354.331378961774
+        y: 316.4365429549809
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        dataset_ids:
+        - Qh9ppWmCPlM2/Yuity9mFqMvlq2OdBlNZRfeUOuCemSgvRXKY84TTtmKtobw5Oka
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1753076425493'
+        metadata_filtering_mode: disabled
+        metadata_model_config:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen-turbo
+          provider: langgenius/tongyi/tongyi
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: text-embedding-v4
+              embedding_provider_name: langgenius/tongyi/tongyi
+              vector_weight: 0.7
+        query_variable_selector:
+        - '1753076425493'
+        - item
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索
+        type: knowledge-retrieval
+      height: 91
+      id: '1753109124599'
+      parentId: '1753076425493'
+      position:
+        x: 83.13673103372139
+        y: 62.3609841784542
+      positionAbsolute:
+        x: 1928.5252460775064
+        y: 225.8686046988813
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: o1-mini
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 944a6ec1-eaeb-4a55-ab69-6289474b17f9
+          role: system
+          text: 你是文学作品翻译团队的一员。你负责优化文学作品的格式。现在，你得到了多种英文译版的评估意见以及最终译版。它的内容经过深思熟虑，但是格式还差一些。你需要参照中文原文的格式，把英文译本（评估意见不用）换成相应的格式，markdown输出
+        - id: 4103b94e-0125-421d-8c57-dc5da7f6708f
+          role: user
+          text: '中文原版
+
+            {{#1752801806086.user_input#}}
+
+            英文译版
+
+            {{#1753085770199.text#}}'
+        selected: false
+        title: format
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1753169781421'
+      position:
+        x: 4089.2983377552137
+        y: 316.4365429549809
+      positionAbsolute:
+        x: 4089.2983377552137
+        y: 316.4365429549809
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "def main(arg1: list) -> dict:\n  if not isinstance(arg1, list):\n \
+          \   error_message = f\"输入错误：期望的格式是列表 (list)，但收到了 {type(arg1)}。\"\n    return\
+          \ {\"result\": error_message}\n  processed_ids = set()\n  content_list =\
+          \ []\n  for item in arg1:\n    if isinstance(item, dict):\n      metadata\
+          \ = item.get('metadata', {})\n      segment_id = metadata.get('segment_id')\n\
+          \      content = item.get('content')\n      if segment_id and segment_id\
+          \ not in processed_ids and content:\n        content_list.append(str(content))\n\
+          \        processed_ids.add(segment_id)\n  final_string = \"\\n\\n---\\n\\\
+          n\".join(content_list)\n\n  return {\n    \"result\": final_string\n  }"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 检索结果string
+        type: code
+        variables:
+        - value_selector:
+          - '1753076425493'
+          - output
+          value_type: array[object]
+          variable: arg1
+      height: 53
+      id: '1753173129620'
+      position:
+        x: 2286.6659052970613
+        y: 163.5076205204271
+      positionAbsolute:
+        x: 2286.6659052970613
+        y: 163.5076205204271
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        output_type: string
+        selected: false
+        title: 变量聚合器
+        type: variable-aggregator
+        variables:
+        - - '1752821188881'
+          - text
+        - - '1753077378288'
+          - text
+      height: 128
+      id: '1753249967143'
+      position:
+        x: 2920.1995043697543
+        y: 316.4365429549809
+      positionAbsolute:
+        x: 2920.1995043697543
+        y: 316.4365429549809
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    viewport:
+      x: -1309.8955320368054
+      y: -128.27467160979984
+      zoom: 1.1809926614295312
